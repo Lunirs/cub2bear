@@ -21,12 +21,11 @@ Order.init(
   },
   {
     sequelize,
-    timestamps: true;,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'order',
   }
 );
-
 
 module.exports = Order;
