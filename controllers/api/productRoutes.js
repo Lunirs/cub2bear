@@ -8,6 +8,4 @@ router.get('/', (req, res) => {
   // find all products
 });
 
-
-
 module.exports = router;
