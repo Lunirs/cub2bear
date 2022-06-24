@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Product, Categories } = require('../models');
+const { Product, Category } = require('../models');
+const withAuth = require("../../utils")
 
 // The `/api/products` endpoint
 
@@ -33,7 +34,19 @@ router.post('/', (req, res) => {
             tag_id,
           };
         });
+router.post("/", withAuth, async(req,res) =>{
+  try{
+    const newProductData = await Product.create({
+      product_name: req.body.product_name,
+      price: req.body.price,
+      description: req.body.description,
+      category_id: req.body.category_id,
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(productData)
 
+  }
+})
 
 // update product
 router.put('/:id', (req, res) => {
