@@ -11,10 +11,10 @@ Order.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    quantity: {
+    total_quantity: {
       type: DataTypes.INTEGER,
     },
-    total_price: {
+    total_cost: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
