@@ -8,23 +8,24 @@
   </head>
   <body>
 <header>
-// suggestion: NAV BAR CAN BE A BOOTSTAP OF SOME SORT
+
+// suggestion: NAV BAR CAN BE A BOOTSTAP ???? OF SOME SORT
   // login handlebar should be created 
           // sign up handlbar should be created 
  <h1 class="title"> CUBS2BEARS </h1>
       <nav>
         <ul>
           <li><a href="/" class="nav-bar">Home</a></li>
-          <li><a href="/" class="nav-bar">LOG IN</a></li>
           {{#if loggedIn}}
             <li><button id="logout">Logout</button></li>
           {{else}}
-            <li><a href="/" class="nav-page">SIGN UP </a></li>
+          <li><a href="/" class="nav-bar">LOG IN</a></li>
           {{/if}}
         </ul>
       </nav>
        
 </header>
+
 
  <main>
       <div class="card-container">
@@ -32,6 +33,6 @@
       </div>
  </main>
 
-    <footer>// CONTACT US, ETC. </footer>
+    <footer> // CONTACT US, ETC. </footer>
   </body>
 </html>
