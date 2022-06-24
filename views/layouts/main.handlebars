@@ -3,9 +3,35 @@
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>Document</title>
+    <title>CUBS2BEAR</title>
+    <link rel="stylesheet" href="/public/css/style.css"
   </head>
   <body>
-    {{{body}}}
+<header>
+// suggestion: NAV BAR CAN BE A BOOTSTAP OF SOME SORT
+  // login handlebar should be created 
+          // sign up handlbar should be created 
+ <h1 class="title"> CUBS2BEARS </h1>
+      <nav>
+        <ul>
+          <li><a href="/" class="nav-bar">Home</a></li>
+          <li><a href="/" class="nav-bar">LOG IN</a></li>
+          {{#if loggedIn}}
+            <li><button id="logout">Logout</button></li>
+          {{else}}
+            <li><a href="/" class="nav-page">SIGN UP </a></li>
+          {{/if}}
+        </ul>
+      </nav>
+       
+</header>
+
+ <main>
+      <div class="card-container">
+        {{{body}}}
+      </div>
+ </main>
+
+    <footer>// CONTACT US, ETC. </footer>
   </body>
 </html>
