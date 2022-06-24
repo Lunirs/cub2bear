@@ -22,6 +22,18 @@ const { Product, Categories } = require('../models');
  //  }
 // });
 
+// create new product 
+router.post('/', (req, res) => {
+  Product.create(req.body)
+    .then((product) => {
+      if (req.body.catergory.length) {
+        const age = req.body.catergoryIds.map((catergory_id) => {
+          return {
+            product_id: product.id,
+            tag_id,
+          };
+        });
+
 
 
 module.exports = router;
