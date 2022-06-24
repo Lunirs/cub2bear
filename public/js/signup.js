@@ -31,6 +31,8 @@ async function signupFormHandler(event) {
   
       if (response.ok) {
         document.location.replace('/');
+      } else if(response.status == 400) {
+        alert(response.json.message);
       } else {
         alert(response.statusText);
       }
