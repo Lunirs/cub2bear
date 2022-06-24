@@ -35,8 +35,20 @@ router.post('/', (req, res) => {
         });
 
 
-      // deleting products 
+// update product
+router.put('/:id', (req, res) => {
+  // update product data
+  Product.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((product) => {
+      return Product.findAll({ where: { product_id: req.params.id } });
+    })
       
+
+      // deleting products 
         router.delete('/:id', async (req, res) => {
           // delete one product by its `id` value
         try {
