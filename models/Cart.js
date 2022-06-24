@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
-class Order extends Model {}
+class Cart extends Model {}
 
-Order.init(
+Cart.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,37 +11,32 @@ Order.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    total_quantity: {
-      type: DataTypes.INTEGER,
-    },
-    total_cost: {
-      type: DataTypes.DECIMAL(10, 2),
-      allowNull: false,
-    },
-    product_id: {
+    quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'product',
-        key: 'id',
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'user',
+        key: 'id',
+      },
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
         key: 'id',
       },
     },
   },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'order',
+    modelName: 'cart',
   }
 );
 
-module.exports = Order;
+module.exports = Cart;

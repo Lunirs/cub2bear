@@ -1,5 +1,9 @@
+// import out database connection from config.js 
 const sequelize = require('../config/connection');
+
+// import sequelize library 
 const { Model, DataTypes } = require('sequelize');
+
 
 class Product extends Model {}
 
