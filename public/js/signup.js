@@ -1,39 +1,33 @@
-async function signupFormHandler(event) {
+const signupFormHandler = async (event) => {
   event.preventDefault();
+  console.log('please work');
 
-  const email = document.querySelector('#username').value.trim();
   const username = document.querySelector('#username').value.trim();
+  const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
   const password2 = document.querySelector('#password2').value.trim();
 
-  if (!email) {
-    alert('Please enter email.');
-  } else if (!username) {
-    alert('Please enter username');
-  } else if (!password) {
-    alert('Please enter password.');
-  } else if (password != password2) {
-    alert('You entered different password for confirm.');
-  } else {
+  if (username && email && password && password === password2) {
     const response = await fetch('/api/users', {
-      method: 'post',
-      body: JSON.stringify({
-        email,
-        username,
-        password,
-      }),
+      method: 'POST',
+      body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    console.log(response);
     if (response.ok) {
       document.location.replace('/');
-    } else if (response.status == 400) {
-      alert(response.json.message);
     } else {
-      alert(response.statusText);
+      alert(
+        `Failed to sign up. Please check to see if all fields match the requirement.
+        (Password length must be 8 or more characters)`
+      );
     }
+  } else {
+    alert(
+      'Please do not leave a field blank. Please also double check if your passwords match.'
+    );
   }
-}
+};
 
 document
   .querySelector('.signup-form')
