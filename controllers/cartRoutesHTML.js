@@ -2,7 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils');
 const { Cart, Product } = require('../models');
 
-router.get('/cart', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const cartData = await Cart.findAll({
       where: { user_id: req.session.user_id },

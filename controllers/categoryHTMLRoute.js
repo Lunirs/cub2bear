@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Category, Product } = require('../models');
 
-router.get('/categories', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll();
 
@@ -17,7 +17,7 @@ router.get('/categories', async (req, res) => {
 
 //show products by catagory
 
-router.post('/category/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
   try {
     const productByCatData = await Product.findAll({
       where: { category_id: req.params.id },

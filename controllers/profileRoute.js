@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Product } = require('../models');
 const withAuth = require('../utils');
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const productData = await Product.findAll({
       where: {
@@ -20,7 +20,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile/edit/:id', withAuth, async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id);
 
@@ -35,7 +35,7 @@ router.get('/profile/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile/new', withAuth, async (req, res) => {
+router.get('/new', withAuth, async (req, res) => {
   try {
     res.render('newProductListing', {});
   } catch (err) {

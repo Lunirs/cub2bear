@@ -28,7 +28,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/cart/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const deleteCartData = await Cart.destroy({
       where: { user_id: req.session.user_id, id: req.params.id },
