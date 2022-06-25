@@ -9,9 +9,7 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: { exclude: ['password'] },
         },
-        {
-          model: Category,
-        },
+        { model: Category },
       ],
     });
 
@@ -31,9 +29,7 @@ router.get('/products/:id', async (req, res) => {
           model: User,
           attributes: { exclude: ['password'] },
         },
-        {
-          model: Category,
-        },
+        { model: Category },
       ],
     });
 

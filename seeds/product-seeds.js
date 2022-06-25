@@ -2,7 +2,7 @@ const { Product } = require('../models');
 
 const productData = [
   {
-    product_name: 'Pink Onesie',
+    name: 'Pink Onesie',
     description: "Completely new. Never worn because my baby didn't fit.",
     price: 40.0,
     stock: 1,
@@ -11,7 +11,7 @@ const productData = [
   },
 
   {
-    product_name: 'Yellow Onsie',
+    name: 'Yellow Onsie',
     description: 'Worn only once. Still in great condition.',
     price: 37.0,
     stock: 1,
@@ -20,7 +20,7 @@ const productData = [
   },
 
   {
-    product_name: 'Blue Onesie',
+    name: 'Blue Onesie',
     description: 'Worn several times. Still in good condition.',
     price: 35.0,
     stock: 1,
@@ -28,7 +28,7 @@ const productData = [
     user_id: 3,
   },
   {
-    product_name: 'Red Onesie',
+    name: 'Red Onesie',
     description: 'Color is slightly faded. But overall good condition.',
     price: 30.0,
     stock: 1,

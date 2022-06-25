@@ -54,6 +54,11 @@ Order.belongsTo(User, {
   onDelete: 'CASCADE',
 });
 
+Product.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
 module.exports = {
   User,
   Product,
