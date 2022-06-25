@@ -1,5 +1,11 @@
 <h1>HELLO</h1>
-
+{{#each categories as |category|}}
+  <h1><a href='/category/{{id}}'>{{name}}</a></h1>
+{{/each}}
 {{#each products as |product|}}
-  <h2>{{name}} posted by {{user.username}} price: {{price}}</h2>
+  <h2><a href='/products/{{id}}'>{{name}}</a>
+    posted by
+    {{user.username}}
+    price:
+    {{price}}</h2>
 {{/each}}

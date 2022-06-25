@@ -9,8 +9,9 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProductData = await Product.create({
-      product_name: req.body.product_name,
+      name: req.body.name,
       price: req.body.price,
+      stock: req.body.stock,
       description: req.body.description,
       category_id: req.body.category_id,
       user_id: req.session.user_id,

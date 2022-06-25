@@ -13,9 +13,17 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const products = productData.map((product) => product.get({ plain: true }));
+    const categoryData = await Category.findAll();
 
-    res.render('homepage', { products, loggedIn: req.session.loggedIn });
+    const products = productData.map((product) => product.get({ plain: true }));
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+    res.render('homepage', {
+      products,
+      categories,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
