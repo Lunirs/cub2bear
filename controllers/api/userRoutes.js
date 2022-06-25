@@ -3,15 +3,6 @@ const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    // const user = await User.findAll({ where: {$or:[
-    //   {email: req.body.email},
-    //   {username: req.body.username}
-    // ]}});
-    // if(user) {
-    //   res.status(400).json({ message: "This email or username already exists."});
-    //   return;
-    // }
-
     const userData = await User.create({
       username: req.body.username,
       email: req.body.email,

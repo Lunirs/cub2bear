@@ -1,6 +1,5 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  console.log('please work');
 
   const username = document.querySelector('#username').value.trim();
   const email = document.querySelector('#email').value.trim();
@@ -18,12 +17,14 @@ const signupFormHandler = async (event) => {
     } else {
       alert(
         `Failed to sign up. Please check to see if all fields match the requirement.
-        (Password length must be 8 or more characters)`
+        (Password length must be 8 or more characters)
+        (Username / email may already exist.)`
       );
     }
   } else {
     alert(
-      'Please do not leave a field blank. Please also double check if your passwords match.'
+      `Please do not leave a field blank. Please also double check if your passwords match.
+      If all fields are correct, possibility that username is taken or there is already an account with this email.`
     );
   }
 };
