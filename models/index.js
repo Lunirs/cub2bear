@@ -4,7 +4,7 @@ const Order = require('./Order');
 const Category = require('./Category');
 const Cart = require('./Cart');
 
-Product.belongsTo(Category, {
+Product.hasOne(Category, {
   foreignkey: 'category_id',
   onDelete: 'CASCADE',
 });
