@@ -1,33 +1,34 @@
 const router = require('express').Router();
 const { Category, Product } = require('../models');
 
-router.get('/', async (req, res) => {
-  try {
-    const categoryData = await Category.findAll();
+// router.get('/', async (req, res) => {
+//   try {
+//     const categoryData = await Category.findAll();
 
-    const categories = categoryData.map((category) =>
-      category.get({ plain: true })
-    );
+//     const categories = categoryData.map((category) =>
+//       category.get({ plain: true })
+//     );
 
-    res.json(categories);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('homepage', { categories });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //show products by catagory
 
-router.post('/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const productByCatData = await Product.findAll({
       where: { category_id: req.params.id },
     });
 
-    const productsByCat = productByCatData.map((product) => {
+    const products = productByCatData.map((product) => {
       product.get({ plain: true });
     });
+    console.log(products);
 
-    res.render('homepage', { productsByCat });
+    res.render('individualCategory', { products });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -8,9 +8,9 @@ const profileRoutes = require('./profileRoute');
 
 router.use('/', homepageRoutes);
 router.use('/api', apiRoutes);
-router.use('/categories', categoryRoutes);
+router.use('/category', categoryRoutes);
 router.use('/cart', cartRoutes);
 router.use('/orders', orderRoutes);
-router.use('profile', profileRoutes);
+router.use('/profile', profileRoutes);
 
 module.exports = router;
