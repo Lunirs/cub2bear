@@ -13,9 +13,8 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response);
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/login');
     } else {
       alert(
         `Failed to sign up. Please check to see if all fields match the requirement.
