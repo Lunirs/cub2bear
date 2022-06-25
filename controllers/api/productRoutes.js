@@ -12,7 +12,6 @@ router.post('/', withAuth, async (req, res) => {
       where: {name: req.body.category}
     });
 
-
     const newProductData = await Product.create({
       product_name: req.body.name,
       price: req.body.price,

@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>CUBS2BEAR</title>
-    <link rel="stylesheet" href="/public/css/style.css"
+    <link rel="stylesheet" href="/css/style.css"
   </head>
   <body>
 <header>
@@ -16,10 +17,12 @@
       <nav>
         <ul>
           <li><a href="/" class="nav-bar">Home</a></li>
+           <li><a href="/profile" class="nav-bar">Profile</a></li>
           {{#if loggedIn}}
             <li><button id="logout">Logout</button></li>
+            <script src="/js/logout.js"></script>
           {{else}}
-          <li><a href="/" class="nav-bar">LOG IN</a></li>
+          <li><a href="/login" class="nav-bar">LOG IN</a></li>
           {{/if}}
         </ul>
       </nav>
