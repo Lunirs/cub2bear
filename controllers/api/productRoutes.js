@@ -8,12 +8,16 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
+    const category = await Product.findOne({
+      where: {name: req.body.category}
+    });
+
     const newProductData = await Product.create({
-      name: req.body.name,
+      product_name: req.body.name,
       price: req.body.price,
-      stock: req.body.stock,
       description: req.body.description,
-      category_id: req.body.category_id,
+      stock: req.body.stock,
+      category_id: category.category_id,
       user_id: req.session.user_id,
     });
     res.status(200).json(newProductData);

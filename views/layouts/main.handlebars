@@ -10,17 +10,18 @@
   <body>
 <header>
 
-// suggestion: NAV BAR CAN BE A BOOTSTAP ???? OF SOME SORT
-  // login handlebar should be created 
-          // sign up handlbar should be created 
+ <!--suggestion: NAV BAR CAN BE A BOOTSTAP ???? OF SOME SORT
+    login handlebar should be created 
+    sign up handlbar should be created -->
  <h1 class="title"> CUBS2BEARS </h1>
       <nav>
         <ul>
           <li><a href="/" class="nav-bar">Home</a></li>
-           <li><a href="/profile" class="nav-bar">Profile</a></li>
+          <li><a href="/profile" class="nav-bar">Profile</a></li>
           {{#if loggedIn}}
-            <li><button id="logout">Logout</button></li>
-            <script src="/js/logout.js"></script>
+          <li><a href="/cart" class="nav-bar">Cart</a></li>
+          <li><button id="logout">Logout</button></li>
+          <script src="/js/logout.js"></script>
           {{else}}
           <li><a href="/login" class="nav-bar">LOG IN</a></li>
           {{/if}}

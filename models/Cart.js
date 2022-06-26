@@ -19,12 +19,12 @@ Cart.init(
         model: 'user',
         key: 'id',
       },
-      product_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'product',
-          key: 'id',
-        },
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id',
       },
     },
   },
