@@ -30,19 +30,8 @@
 
         <p class='card-text'>Price: ${{price}}</p>
         <p class='card-text'>Posted By: {{user.username}}</p>
-        <a href='#' class='btn btn-primary'>Add To Cart</a>
+        <a href='/cart' class='btn btn-primary'>Add To Cart</a>
       </div>
     </div>
   {{/each}}
 </div>
-<h1>HELLO</h1>
-{{#each categories as |category|}}
-  <h1><a href='/category/{{id}}'>{{name}}</a></h1>
-{{/each}}
-{{#each products as |product|}}
-  <h2><a href='/products/{{id}}'>{{name}}</a>
-    posted by
-    {{user.username}}
-    price:
-    {{price}}</h2>
-{{/each}}
