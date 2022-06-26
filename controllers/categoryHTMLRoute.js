@@ -27,7 +27,11 @@ router.get('/:id', async (req, res) => {
       product.get({ plain: true })
     );
 
-    res.render('individualCategory', { products });
+    res.render('individualCategory', {
+      products,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
+    });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -29,6 +29,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     res.render('editProductListing', {
       product,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     res.status(500).json(err);
@@ -37,7 +38,10 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
 router.get('/new', withAuth, async (req, res) => {
   try {
-    res.render('newProductListing', {});
+    res.render('newProductListing', {
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
+    });
   } catch (err) {
     res.status(500).json(err);
   }

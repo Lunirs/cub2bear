@@ -8,7 +8,11 @@ router.get('/', withAuth, async (req, res) => {
       where: { user_id: req.session.user_id },
       include: [Product],
     });
-    res.render('cart', { cartData });
+    res.render('cart', {
+      cartData,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
+    });
   } catch (err) {
     res.status(500).json(err);
   }
