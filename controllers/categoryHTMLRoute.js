@@ -23,10 +23,9 @@ router.get('/:id', async (req, res) => {
       where: { category_id: req.params.id },
     });
 
-    const products = productByCatData.map((product) => {
-      product.get({ plain: true });
-    });
-    console.log(products);
+    const products = productByCatData.map((product) =>
+      product.get({ plain: true })
+    );
 
     res.render('individualCategory', { products });
   } catch (err) {
