@@ -1,12 +1,8 @@
 const sequelize = require('../config/connection');
-
-// import our important data of sequelize library 
 const { Model, DataTypes } = require('sequelize');
 class Product extends Model {}
 
-// set up fields and rules for product model 
 Product.init(
-  // define columns
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,47 +10,49 @@ Product.init(
       autoIncrement: true,
       primaryKey: true,
     },
-
-    product_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
-     },
-  
+    },
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
-
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-
     stock: {
-      stock: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        defaultValue: 10,
-        validate: {
-        isNumeric: tru }
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-
+    in_stock: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'category',
         key: 'id',
-      }
-    }
-  }, 
-
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+  },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "product",
+    modelName: 'product',
   }
 );
 
