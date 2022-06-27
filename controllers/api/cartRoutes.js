@@ -13,24 +13,41 @@ router.get('/', async (req, res) => {
 
 router.post('/', withAuth, async (req, res) => {
   try {
+    let status;
+
     const item = await Cart.findOne({
       where: {
         product_id: req.body.product_id
       }
     })
+
+    // stock data to check if total quantity is over current stock.
+    const product = await Product.findOne({
+      where: {
+        id: req.body.product_id
+      }
+    });
+
     let cartData;
-    
     if(item) {
-      cartData = await Cart.increment(
-        {
-          quantity: + req.body.quantity
-        },
-        {
-          where: {
-            product_id: req.body.product_id
+      const total = item.quantity + req.body.quantity;
+      console.log(total);
+
+      if(total <= product.stock) {
+        cartData = await Cart.increment({
+            quantity: + req.body.quantity
+          }, {
+            where: {
+              product_id: req.body.product_id
+            }
           }
-        }
-      );
+        );
+
+        status = 200;
+      }
+      else {
+        status = 401;
+      }
     }
     else {
       cartData = await Cart.create({
@@ -38,9 +55,11 @@ router.post('/', withAuth, async (req, res) => {
         user_id: req.session.user_id,
         product_id: req.body.product_id,
       });
+
+      status = 200;
     }
 
-    res.status(200).json(cartData);
+    res.status(status).json(cartData);
 
   } catch (err) {
     res.status(500).json(err);
@@ -49,13 +68,30 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const updateCartData = await Cart.update(
-    {
-      quantity: req.body.quantity
-    },  {
-      where: { user_id: req.session.user_id, id: req.params.id },
+    // stock data to check if total quantity is over current stock.
+    const item = await Cart.findOne({
+      where: {
+        id: req.body.id
+      }
+    })
+    const product = await Product.findOne({
+      where: {
+        id: item.product_id
+      }
     });
-    res.status(200).json(updateCartData);
+
+    if(req.body.quantity <= product.stock) {
+      const updateCartData = await Cart.update(
+        {
+          quantity: req.body.quantity
+        },  {
+          where: { user_id: req.session.user_id, id: req.params.id },
+        });
+        res.status(200).json(updateCartData);
+    } else {
+      // error code for over stock
+      res.status(401).json(null);
+    }
   } catch (err) {
     res.status(500).json(err);
   }
