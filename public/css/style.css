@@ -58,6 +58,25 @@
     background-repeat: repeat-x;
   }
   
+
+  /*button universal*/
+  .button {
+    background-color:var(--redbutton);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 23px 6px;
+    cursor: pointer;
+    text-transform:uppercase;  
+    border-radius: 10px;
+  }
+
+/*button specific*/
+
   main {
     display: flex;
     flex-wrap: wrap;
