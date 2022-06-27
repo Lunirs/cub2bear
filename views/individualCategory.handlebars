@@ -6,16 +6,7 @@
   </div>
 </div>
 <div class='d-flex row justify-content-around'>
-  {{#each categories as |category|}}
-
-    <a href='/category/{{id}}'>{{name}}</a>
-
-  {{/each}}
-</div>
-
-<div class='d-flex row justify-content-around'>
   {{#each products as |product|}}
-
     <div
       class='card col-sm-4 col-md-5 m-2 ml-5'
       style='max-width: 18rem; min-width:18rem;'
@@ -28,7 +19,7 @@
       />
       <div class='card-body'>
 
-        <p class='card-text price'>Price: ${{price}}</p>
+        <p class='card-text'>Price: ${{price}}</p>
         <p class='card-text'>Posted By: {{user.username}}</p>
         <button
           class='btn btn-primary addToCartBtn'
@@ -40,6 +31,5 @@
     </div>
 
   {{/each}}
-
 </div>
 <script src='/js/cart.js'></script>

@@ -5,7 +5,7 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define colums 
+    // define colums
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -13,19 +13,9 @@ Category.init(
       primaryKey: true,
     },
 
-    //age: ?? 
-    
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    product_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'product',
-        key: 'id',
-      },
     },
   },
   {

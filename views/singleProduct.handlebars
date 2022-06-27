@@ -1,0 +1,28 @@
+<div class='jumbotron jumbotron-fluid'>
+  <div class='container'>
+    <h1 class='display-4 text-center'>Fluid jumbotron</h1>
+    <p class='lead'>This is a modified jumbotron that occupies the entire
+      horizontal space of its parent.</p>
+  </div>
+</div>
+<div class='d-flex row justify-content-around'>
+  <div
+    class='card col-sm-4 col-md-5 m-2 ml-5'
+    style='max-width: 18rem; min-width:18rem;'
+  >
+    <h5 class='card-title mt-3'>{{singleProduct.name}}</h5>
+    <img class='card-img-top' src='/img/placeholder.jpg' alt='Card image cap' />
+    <div class='card-body'>
+
+      <p class='card-text'>Price: ${{singleProduct.price}}</p>
+      <p class='card-text'>Posted By: {{singleProduct.user.username}}</p>
+      <button
+        class='btn btn-primary addToCartBtn'
+        data-id='{{singleProductid}}'
+        data-price='{{singleProduct.price}}'
+        value='{{singleProduct.id}}'
+      >Add To Cart</button>
+    </div>
+  </div>
+</div>
+<script src='/js/cart.js'></script>

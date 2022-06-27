@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Product } = require('../models');
-const withAuth = require('../utils');
+const withAuth = require('../utils/auth');
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const productData = await Product.findAll({
       where: {
@@ -20,7 +20,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile/edit/:id', withAuth, async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id);
 
@@ -29,15 +29,19 @@ router.get('/profile/edit/:id', withAuth, async (req, res) => {
     res.render('editProductListing', {
       product,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/profile/new', withAuth, async (req, res) => {
+router.get('/new', withAuth, async (req, res) => {
   try {
-    res.render('newProductListing', {});
+    res.render('newProductListing', {
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id
+    });
   } catch (err) {
     res.status(500).json(err);
   }
