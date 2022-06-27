@@ -1,0 +1,60 @@
+
+
+.btnNew{
+border: none;
+  background:#ED8A8A;
+  margin: 20px;
+  padding: 5px;
+  padding-left: 130px;
+  padding-right: 130px;
+  color: white;
+  outline: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  position: relative;
+  top: -3px;
+  border-radius: 10px;
+  margin-top: 30px;
+  letter-spacing: 5px;
+ 
+}
+
+
+/*same as edit product listing
+.card{
+    background-color: #FEF9E6;
+    align-items: center;
+
+}
+.page-title{
+    justify-items: center;
+    font-size:28px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 20px;
+}
+
+.product-form{
+    font-size:14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #679AE5;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    
+    letter-spacing: 5px;
+}
+
+.form-group{
+    margin-top: 20px;
+}
+.form{
+    margin-top: 20px;
+}
+
+.form-input{
+    border: 1px lightgray solid;
+    padding-right: 280px;
+}
