@@ -21,13 +21,15 @@
 
         <p class='card-text'>Price: ${{price}}</p>
         <p class='card-text'>Posted By: {{user.username}}</p>
-        <button class='btn btn-primary'><a
-            class='text-light'
-            href='/profile/edit/{{id}}'
-          > Edit Product Listing</a></button>
+        <button
+          class='btn btn-primary addToCartBtn'
+          data-id='{{id}}'
+          data-price='{{price}}'
+          value='{{id}}'
+        >Add To Cart</button>
       </div>
     </div>
 
   {{/each}}
 </div>
-
+<script src='/js/cart.js'></script>

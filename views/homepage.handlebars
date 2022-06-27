@@ -28,10 +28,18 @@
       />
       <div class='card-body'>
 
-        <p class='card-text'>Price: ${{price}}</p>
+        <p class='card-text price'>Price: ${{price}}</p>
         <p class='card-text'>Posted By: {{user.username}}</p>
-        <a href='/cart' class='btn btn-primary'>Add To Cart</a>
+        <button
+          class='btn btn-primary addToCartBtn'
+          data-id='{{id}}'
+          data-price='{{price}}'
+          value='{{id}}'
+        >Add To Cart</button>
       </div>
     </div>
+
   {{/each}}
+
 </div>
+<script src='/js/cart.js'></script>

@@ -8,10 +8,13 @@ router.get('/', withAuth, async (req, res) => {
       where: { user_id: req.session.user_id },
       include: [Product],
     });
+
+    const cartItems = cartData.map((cartItem) => cartItem.get({ plain: true }));
+    console.log(cartItems);
     res.render('cart', {
-      cartData,
+      cartItems,
       loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);

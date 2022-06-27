@@ -1,6 +1,18 @@
-{{#each cart as |cart|}}
-  <h1>{{name}}</h1>
-  <p>{{price}}</p>
-  <p>{{description}}</p>
-  <p>{{stock}}</p>
-{{/each}}
+<table class='table'>
+  <thead>
+    <tr>
+      <th scope='col'>Product</th>
+      <th scope='col'>Price</th>
+      <th scope='col'>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each cartItems as |cartItem|}}
+      <tr>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{quantity}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
