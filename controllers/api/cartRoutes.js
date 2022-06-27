@@ -1,15 +1,47 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Cart, Product } = require('../../models');
+const sequelize = require('sequelize');
+
+router.get('/', async (req, res) => {
+  try {
+    data = await Cart.findAll();
+    res.status(200).json(data);
+  } catch (err) {
+    res.json(err);
+  }});
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const cartData = await Cart.create({
-      quantity: req.body.quantity,
-      user_id: req.session.user_id,
-      product_id: req.body.product_id,
-    });
+    const item = await Cart.findOne({
+      where: {
+        product_id: req.body.product_id
+      }
+    })
+    let cartData;
+    
+    if(item) {
+      cartData = await Cart.increment(
+        {
+          quantity: + req.body.quantity
+        },
+        {
+          where: {
+            product_id: req.body.product_id
+          }
+        }
+      );
+    }
+    else {
+      cartData = await Cart.create({
+        quantity: req.body.quantity,
+        user_id: req.session.user_id,
+        product_id: req.body.product_id,
+      });
+    }
+
     res.status(200).json(cartData);
+
   } catch (err) {
     res.status(500).json(err);
   }
@@ -17,12 +49,13 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const updateCartData = await Cart.update(req.body, {
-      where: { user_id: req.session.user_id, product_id: req.params.id },
-      include: [Product],
+    const updateCartData = await Cart.update(
+    {
+      quantity: req.body.quantity
+    },  {
+      where: { user_id: req.session.user_id, id: req.params.id },
     });
     res.status(200).json(updateCartData);
-    res.redirect('/cart');
   } catch (err) {
     res.status(500).json(err);
   }
