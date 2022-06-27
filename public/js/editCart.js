@@ -12,14 +12,16 @@ const editCart = async (event) => {
     } else {
         response = await fetch(`/api/cart/${id}`, {
             method: 'PUT',
-            body: JSON.stringify({ quantity }),
+            body: JSON.stringify({ id, quantity }),
             headers: { 'Content-Type': 'application/json' },
         });
     }
 
-    if (response.ok) {
+    if (response.status == 200) {
         alert("Cart item is updated")
         document.location.replace('/cart');
+    } else if (response.status == 401) {
+        alert("You can't have more than stock of the item in the cart.");
     } else {
         alert("Failed to update item in the cart. Not enough stock of the item or the item doesn't exit anymore");
     }
