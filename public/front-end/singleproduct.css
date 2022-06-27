@@ -1,0 +1,39 @@
+/*same as individual category*/
+.addToCartBtn{
+    margin-top: 30px;
+    border: none;
+    background:#ED8A8A;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 5px;
+    color: white;
+    outline: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    top: -3px;
+    border-radius: 10px;
+    font-size:13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.card-title{
+    font-size:18px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    margin: 10px;
+}
+
+.card-body{
+    font-size:14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter; 
+}
+
+/*same as individual category*/

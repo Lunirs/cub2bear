@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./singleproduct.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+
+<div class='d-flex row justify-content-around'>
+  <div
+    class='card col-sm-4 col-md-5 m-2 ml-5'
+    style='max-width: 18rem; min-width:18rem;'
+  >
+    <h5 class='card-title mt-3'>{{singleProduct.name}}</h5>
+    <img class='card-img-top' src='/img/placeholder.jpg' alt='Card image cap' />
+    <div class='card-body'>
+      <p class='card-text'>POSTED BY: {{singleProduct.user.username}}</p>
+      <p class='card-text'>PRICE: ${{singleProduct.price}}</p>
+      <p class='card-text'>AVAILABLE QUANTITY: {{singleProduct.stock}}</p>
+      <p class='card-text'>PRODUCT DESCRIPTION: {{singleProduct.description}}</p>
+
+      <button
+        class='btn btn-primary addToCartBtn'
+        data-id='{{singleProductid}}'
+        data-price='{{singleProduct.price}}'
+        value='{{singleProduct.id}}'
+      >Add To Cart</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
