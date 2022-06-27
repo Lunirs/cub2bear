@@ -1,0 +1,72 @@
+
+.scallop {
+  position:relative;
+  background: #DDFAEF;
+  padding-bottom:0px;
+}
+
+.scallop::after { 
+  position:absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  content:" ";
+  background: 
+  radial-gradient(circle at 50% 0%, #DDFAEF 25%, #FEF9E6 26%, #FEF9E6 40%);
+  background-color: #DDFAEF;
+  background-size:100px 200px;
+  height:80px;
+  background-repeat: repeat-x;
+}
+
+.navbar{
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #0167FF;
+  font-size: 14px;
+}
+
+.jumbotron {
+  position: relative;
+  background: none;
+}
+.jumbotron:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity : 0.2;
+  z-index: -1;
+}
+
+.jumbotron h5{
+  font-size: 32px;
+  text-justify: center;
+  line-height:40px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: lighter;
+  color: #0167FF;
+
+  letter-spacing: 15px;
+
+}
+
+.jumbotron img{
+  border: none;
+ outline: 0px;
+}
+
+.btn{
+  background-color: #ED8A8A;
+  color: white;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+}
