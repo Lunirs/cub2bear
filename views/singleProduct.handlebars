@@ -1,9 +1,9 @@
 <div class='card-container m-auto'>
-  <a href='/' class='btn mb-3'>Back To Home</a>
+  <a href='/' class='btn btn-lg mb-3'>Back To Home</a>
   <div class='d-flex row justify-content-around'>
     <div
       class='card col-sm-4 col-md-5 m-2 ml-5'
-      style='max-width: 18rem; min-width:18rem;'
+      style='max-width: 18rem; min-width:18rem;border-radius:30px;'
     >
       <h5 class='card-title mt-3'>{{singleProduct.name}}</h5>
       <img
@@ -12,10 +12,10 @@
         alt='Card image cap'
       />
       <div class='card-body'>
-        <p class='card-text'>Posted By: {{singleProduct.user.username}}</p>
-        <p class='card-text'>Price: ${{singleProduct.price}}</p>
-        <p class='card-text'>Available Quantity: {{singleProduct.stock}}</p>
-        <p class='card-text'>Product Description:
+        <p class='card-text'>POSTED BY: {{singleProduct.user.username}}</p>
+        <p class='card-text'>PRICE: ${{singleProduct.price}}</p>
+        <p class='card-text'>AVAILABLE QUANTITY: {{singleProduct.stock}}</p>
+        <p class='card-text'>PRODUCT DESCRIPTION:
           {{singleProduct.description}}</p>
 
         <button
