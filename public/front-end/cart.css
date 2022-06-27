@@ -1,0 +1,46 @@
+.table {
+background-color: #FEF9E6;
+margin: 50px;
+}
+.thread{
+  border-bottom: 0px;
+  outline: none;
+  background-color: #FEF9E6;
+  font-size:16px;
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #0167FF;
+ 
+}
+
+.thread th{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right:10px;
+  font-weight: lighter;
+  border-radius: 10px;
+  border-bottom: 0px;
+}
+
+h3{
+  padding-left: 50px;
+  font-size:16px;
+  font-family: 'Nanum Gothic', sans-serif;
+  color: #0167FF;
+  font-weight: bolder;
+}
+
+.btn-primary{
+  border: none;
+  background:#ED8A8A;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -3.5px;
+  color: white;
+  outline: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  align-items: center;
+  position: relative;
+  top: -3px;
+}
