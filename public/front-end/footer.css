@@ -1,0 +1,111 @@
+.footer-dark {
+    padding:60px 0;
+    color:#f0f9ff;
+    background-color:#679AE5;
+    align-items: center;
+    padding-left:100px ;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:lighter;
+    font-size:16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+  }
+  
+  .footer-dark ul {
+    padding:20px;
+    justify-content: space-between 30px;
+    list-style:none;
+    line-height:40px;
+    font-size:12px;
+    margin-right:0;
+    border-right: solid white 1px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight:lighter;
+    text-align: center;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+
+  .form-footer {
+    align-items: center;
+    margin-left: 120px;
+    padding-top: 40px;
+  }
+
+  .form-footer input[type="text"] {
+    border: 0.5px white solid;
+    padding-right: 100px;
+    padding-top: 5px;
+    align-items: center;
+    font-weight:lighter;
+    color: rgb(255, 255, 255);
+    background-color: #679AE5;
+    outline: 0.5px white solid;
+}
+
+::placeholder {
+    font-size: 14px;
+    padding-left: 10px;
+    font-style: italic;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    outline: 1px white;
+    opacity: 0.8;
+}
+
+.form-footer input[type="button"] {
+    border: none;
+    background:#ED8A8A;
+    padding: 4.5px;
+    margin-left: -3.5px;
+    color: white;
+    outline: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    align-items: center;
+    position: relative;
+    top: -3px;
+}
+
+.footer-dark .item.social {
+    text-align:center;
+    margin-top:40px;
+  }
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+    padding-top: 8px;
+  }
+.footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
