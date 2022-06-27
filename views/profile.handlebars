@@ -1,5 +1,8 @@
-<div class='card-container m-auto'>
-  <button class='btn btn-primary'><a class='text-light' href='/profile/new'>
+<div class='card-container m-5'>
+  <button class='btn-addnew btn-primary'><a
+      class='text-light'
+      href='/profile/new'
+    >
       Add New Product!</a></button>
   <div class='d-flex row justify-content-around'>
     {{#each products as |product|}}
@@ -15,9 +18,9 @@
         />
         <div class='card-body'>
 
-          <p class='card-text'>Price: ${{price}}</p>
-          <p class='card-text'>Posted By: {{user.username}}</p>
-          <button class='btn btn-primary'><a
+          <p class='card-text'>PRICE: ${{price}}</p>
+          <p class='card-text'>POSTED BY: {{user.username}}</p>
+          <button class='btn-editpr btn-primary ml-auto mr-auto'><a
               class='text-light'
               href='/profile/edit/{{id}}'
             > Edit Product Listing</a></button>
