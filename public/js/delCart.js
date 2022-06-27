@@ -1,7 +1,6 @@
 const delCart = async (event) => {
     event.preventDefault();
     const id = event.target.value;
-    
 
     const response = await fetch(`/api/cart/${id}`, {
       method: 'DELETE',

@@ -13,7 +13,7 @@ const addCart = async (event) => {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  if (response.ok) {
+  if (response.status) {
     alert("The item is added to cart successfully");
   } else {
     alert("Failed to add the item into the cart.");
