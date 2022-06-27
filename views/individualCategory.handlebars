@@ -1,29 +1,31 @@
 <a href='/' class='btn btn-lg mb-3'>Back To Home</a>
-<div class='d-flex row justify-content-around'>
-  {{#each products as |product|}}
-    <div
-      class='card col-sm-4 col-md-5 m-2 ml-5'
-      style='max-width: 18rem; min-width:18rem; border-radius:30px;'
-    >
-      <h5 class='card-title mt-3'><a href='/products/{{id}}'>{{name}}</a></h5>
-      <img
-        class='card-img-top'
-        src='/img/assets/placeholder.jpg'
-        alt='Card image cap'
-      />
-      <div class='card-body'>
+<div class='card-container m-auto'>
+  <div class='d-flex row justify-content-around'>
+    {{#each products as |product|}}
+      <div
+        class='card col-sm-4 col-md-5 m-2 ml-5'
+        style='max-width: 18rem; min-width:18rem; border-radius:30px;'
+      >
+        <h5 class='card-title mt-3'><a href='/products/{{id}}'>{{name}}</a></h5>
+        <img
+          class='card-img-top'
+          src='/img/assets/placeholder.jpg'
+          alt='Card image cap'
+        />
+        <div class='card-body'>
 
-        <p class='card-text'>Price: ${{price}}</p>
-        <p class='card-text'>Posted By: {{user.username}}</p>
-        <button
-          class='btn btn-primary addToCartBtn'
-          data-id='{{id}}'
-          data-price='{{price}}'
-          value='{{id}}'
-        >Add To Cart</button>
+          <p class='card-text'>Price: ${{price}}</p>
+          <p class='card-text'>Posted By: {{user.username}}</p>
+          <button
+            class='btn btn-primary addToCartBtn'
+            data-id='{{id}}'
+            data-price='{{price}}'
+            value='{{id}}'
+          >Add To Cart</button>
+        </div>
       </div>
-    </div>
 
-  {{/each}}
+    {{/each}}
+  </div>
 </div>
 <script src='/js/cart.js'></script>
