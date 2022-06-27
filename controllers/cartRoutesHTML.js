@@ -8,11 +8,20 @@ router.get('/', withAuth, async (req, res) => {
       where: { user_id: req.session.user_id },
       include: [Product],
     });
+    let totalPrice = 0;
+    let cartItems = cartData.map((cartItem) => cartItem.get({ plain: true }));
+    cartItems.forEach(item => {
+      var products = item.product.price * item.quantity;
+      item.total = parseFloat(products).toFixed(2);
+      totalPrice += products;
+    });
 
-    const cartItems = cartData.map((cartItem) => cartItem.get({ plain: true }));
+    const totalFloat = parseFloat(totalPrice).toFixed(2)
+    
     console.log(cartItems);
     res.render('cart', {
       cartItems,
+      totalFloat,
       loggedIn: req.session.loggedIn,
       user_id: req.session.user_id,
     });

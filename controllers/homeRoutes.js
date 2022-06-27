@@ -3,6 +3,7 @@ const { Product, Category, User } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
+    console.log("logged in: " + req.session.loggedIn);
     const productData = await Product.findAll({
       include: [
         {

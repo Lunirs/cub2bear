@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../models');
+const { Category, Product, User } = require('../models');
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -21,6 +21,7 @@ router.get('/:id', async (req, res) => {
   try {
     const productByCatData = await Product.findAll({
       where: { category_id: req.params.id },
+      include: [{ model: User, attributes: { exclude: ['password'] } }],
     });
 
     const products = productByCatData.map((product) =>
@@ -30,7 +31,7 @@ router.get('/:id', async (req, res) => {
     res.render('individualCategory', {
       products,
       loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
