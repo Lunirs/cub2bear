@@ -1,0 +1,216 @@
+:root {
+    --mintgreenheader: #DDFAEF;
+    --yellowbg: #FEF9E6;
+    --bluefooter: #679AE5;
+    --redbutton: #ED8A8A;
+    --whitecards: #FFFFFF;
+    --fontblue: #0167FF;
+    --redbright: #FB7777;
+    --orange: #F8B941;
+    --yellow:#E7D643;
+    --green:#9AD8AB;
+  }
+
+  body {
+    font-family: 'Nanum Gothic', sans-serif;;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--yellowbg);
+  }
+
+  header {
+    padding: 80px;
+    text-align: center;
+    background: var(--mintgreenheader);
+    color: var(--fontblue);
+    border-bottom-style: none;
+  }
+
+  .scallop {
+    position:relative;
+    background: var(--mintgreenheader);
+    padding:50px;
+  }
+   .scallop .navbar-brand{
+    position:relative;
+    text-align:center;
+    color:var(--fontblue);
+    font-size: 32px;
+    text-transform:uppercase;  
+    line-height: 150%;
+    letter-spacing: 40%;
+  }
+  .scallop::after { 
+    position:absolute;
+    bottom: -50px;
+    left: 0px;
+    width: 100%;
+    content:" ";
+    background: 
+    radial-gradient(circle at 50% 0%, var(--mintgreenheader)
+     25%, var(--yellowbg) 26%, var(--yellowbg) 40%);
+    background-color: var(--mintgreenheader);
+    background-size:50px 100px;
+    height:50px;
+    background-repeat: repeat-x;
+  }
+  
+
+  /*button universal*/
+  .button {
+    background-color:var(--redbutton);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 23px 6px;
+    cursor: pointer;
+    text-transform:uppercase;  
+    border-radius: 10px;
+  }
+
+/*button specific*/
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  aside {
+    flex: 0;
+    background-color: var(--tertiary);
+    padding: 80px;
+    text-align: left;
+    color: var(--light);
+  }
+  
+  nav {
+    display: flex;
+    background-color: var(--secondary);
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    min-height: 100%;
+    margin: 0px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    background-color: #ebebeb;
+  }
+  
+  .add-dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    margin: 5px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    text-align: center;
+    background-color: var(--tertiary);
+  }
+  
+  .edit-dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    margin: 5px auto;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 50px;
+    text-align: center;
+    background-color: var(--tertiary);
+  }
+  
+  /* CARDS */
+  .dish-card {
+    margin: 20px;
+    flex: 0 1 300px;
+    padding: 5px;
+    width: 35%;
+    min-height: 100%;
+    min-width: 35%;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .menu-card {
+    margin: 50px;
+    flex: 0 1 300px;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: groove;
+    border-width: thick;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .card-header {
+    color: var(--light);
+    margin: 0;
+    background-color: var(--secondary);
+    padding: 0.625rem;
+    border: 3px solid var(--primary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+  }
+
+  .has-nuts {
+    color: var(--error)
+  }
+
+  .dish-card-header {
+    font-size: 1.5rem;
+    color: var(--tertiary);
+    margin: 0;
+    background-color: var(--light);
+    padding: 0.625rem;
+    border-bottom-style: solid;
+  }
+  
+  .card-body {
+    padding: 2.5%;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  /* LAYOUT */
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    align-items: center;
+  }
+  
