@@ -1,118 +1,137 @@
-<!DOCTYPE html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>CUBS2BEAR</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'
+      integrity='sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn'
+      crossorigin='anonymous'
+    />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'
+      rel='stylesheet'
+    />
   </head>
   <body>
-<header>
+    <header class='pb-0 pr-0 pl-0 pt-0'>
+      <div class='scallop'>
+        <nav class='navbar navbar-expand-lg fixed-top'>
+          <div class='button-log text-right float-right'>
+            {{#if loggedIn}}
+              <button class='btn btn-lg' id='logout'>Log Out</button>
+              <script src='/js/logout.js'></script>
+            {{else}}
+              <a class='btn btn-lg' href='/login'>Log In</a>
+            {{/if}}
+          </div>
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav mr-auto'>
+              <li class='nav-item active'>
+                <a class='nav-link' href='/'>HOME
+                  <span class='sr-only'>(current)</span></a>
+              </li>
 
- <!--suggestion: NAV BAR CAN BE A BOOTSTAP ???? OF SOME SORT
-    login handlebar should be created 
-    sign up handlbar should be created -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Cub2Bear</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/profile">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/cart">Cart</a>
-      </li>
-      {{#if loggedIn}}
-      <li class="nav-item">
-        <button id="logout">Log Out</button>
-        <script src="/js/logout.js"></script>
-      </li>
-      {{else}}
-       <li class="nav-item">
-        <a class="nav-link" href="/login">Log In</a>
-        {{/if}}
-      </li>
-    </ul>
-  </div>
-</nav>
-</header>
+              <li class='nav-item'>
+                <a class='nav-link' href='/profile'>PROFILE</a>
+              </li>
 
+              <li class='nav-item'>
+                <a class='nav-link' href='/cart'>CART</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class='d-flex justify-content-center'>
+          <div class='jumbotron'>
+            <img
+              src='/img/assets/cub2bear.png'
+              class='rounded mx-auto d-block'
+              alt='logo-cub2bear'
+            />
+            <h5 class='text-center'>CUB2BEAR</h5>
+          </div>
+        </div>
+      </div>
+    </header>
 
- <main>
-      <div class="card-container">
+    <main>
+      <div class='card-container'>
         {{{body}}}
       </div>
- </main>
+    </main>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-<!-- Footer -->
+    <!-- Footer -->
   </body>
- 
-      <div class="footer-dark">
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-3 item">
-                <h3>CONTACT US</h3>
-                <ul>
-                  <li><a href="1-999-6789">1-999-cub2bear</a></li>
-                  <li>(1-999-6789)</li>
-                  <li>Mon-Fri: 8am - 6pm EST</li>
-                  <li>
-                    <a href="customer@cub2bear.com">customer@cub2bear.com</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6 col-md-3 item">
-                <h3>CUSTOMER CARE</h3>
-                <ul>
-                  <li><a href="#">F.A.Qs</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms and Conditions</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 item text">
-                <h3>JOIN OUR MAILING LIST</h3>
-                <form class="form-footer my-3">
-                  <input
-                    type="text"
-                    placeholder="Enter your email..."
-                    name="Enter"
-                  />
-                  <input type="button" value="JOIN" />
-                </form>
-              </div>
-              <div class="col item social">
-                <a href="#"><i class="icon ion-social-facebook"></i></a
-                ><a href="#"><i class="icon ion-social-twitter"></i></a
-                ><a href="#"><i class="icon ion-social-snapchat"></i></a
-                ><a href="#"><i class="icon ion-social-instagram"></i></a>
-              </div>
-            </div>
-            <p class="copyright">CUB 2 BEAR © 2022</p>
+
+  <div class='footer-dark'>
+    <footer>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-sm-6 col-md-3 item'>
+            <h3>CONTACT US</h3>
+            <ul>
+              <li><a href='1-999-6789'>1-999-cub2bear</a></li>
+              <li>(1-999-6789)</li>
+              <li>Mon-Fri: 8am - 6pm EST</li>
+              <li>
+                <a href='customer@cub2bear.com'>customer@cub2bear.com</a>
+              </li>
+            </ul>
           </div>
-          </footer>
+          <div class='col-sm-6 col-md-3 item'>
+            <h3>CUSTOMER CARE</h3>
+            <ul>
+              <li><a href='#'>F.A.Qs</a></li>
+              <li><a href='#'>Privacy Policy</a></li>
+              <li><a href='#'>Terms and Conditions</a></li>
+              <li><a href='#'>Careers</a></li>
+            </ul>
           </div>
+          <div class='col-md-6 item text'>
+            <h3>JOIN OUR MAILING LIST</h3>
+            <form class='form-footer my-3'>
+              <input
+                type='text'
+                placeholder='Enter your email...'
+                name='Enter'
+              />
+              <input type='button' value='JOIN' />
+            </form>
+          </div>
+          <div class='col item social'>
+            <a href='#'><i class='icon ion-social-facebook'></i></a><a
+              href='#'
+            ><i class='icon ion-social-twitter'></i></a><a href='#'><i
+                class='icon ion-social-snapchat'
+              ></i></a><a href='#'><i class='icon ion-social-instagram'></i></a>
+          </div>
+        </div>
+        <p class='copyright'>CUB 2 BEAR © 2022</p>
+      </div>
+    </footer>
+  </div>
+
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
+  ></script>
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js'
+  ></script>
 </html>
