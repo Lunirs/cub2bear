@@ -12,6 +12,12 @@ const addCart = async (event) => {
     body: JSON.stringify(addItem),
     headers: { 'Content-Type': 'application/json' },
   });
+
+  if (response.ok) {
+    alert("The item is added to cart successfully");
+  } else {
+    alert("Failed to add the item into the cart.");
+  }
 };
 
 document
