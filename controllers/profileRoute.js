@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product } = require('../models');
+const { Product, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -8,6 +8,7 @@ router.get('/', withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      include: [{ model: User, attributes: { exclude: ['password'] } }],
     });
 
     const products = productData.map((product) => product.get({ plain: true }));
@@ -29,7 +30,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     res.render('editProductListing', {
       product,
       loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -40,7 +41,7 @@ router.get('/new', withAuth, async (req, res) => {
   try {
     res.render('newProductListing', {
       loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
     });
   } catch (err) {
     res.status(500).json(err);
