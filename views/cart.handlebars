@@ -4,6 +4,8 @@
       <th scope='col'>Product</th>
       <th scope='col'>Price</th>
       <th scope='col'>Quantity</th>
+      <th scope='col'></th>
+      <th scope='col'></th>
     </tr>
   </thead>
   <tbody>
@@ -11,8 +13,12 @@
       <tr>
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
-        <td>{{quantity}}</td>
+        <td><input type="number" value="{{quantity}}" min="0"></td>
+        <td><button class="btn btn-primary updateCart" value="{{id}}">Update</button></td>
+        <td><button class="btn btn-primary deleteCart" value="{{id}}">Remove</button></td>
       </tr>
     {{/each}}
   </tbody>
 </table>
+
+<script src='/js/delCart.js'></script>
