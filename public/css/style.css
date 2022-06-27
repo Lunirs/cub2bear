@@ -590,3 +590,37 @@ button {
   border: 1px lightgray solid;
   padding-right: 150px;
 }
+
+.btn-editpr {
+  margin-top: 30px;
+  border: none;
+  background: #ed8a8a;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+  outline: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  position: relative;
+  top: -3px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.btn-addnew {
+  margin-top: 30px;
+  border: none;
+  background: #ed8a8a;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  outline: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  position: relative;
+  top: -3px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
