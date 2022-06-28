@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<div class="row">
+
+<div class='card-container m-auto'>
+  <div class='d-flex row justify-content-around'>
+    <div class="col-12">
+  <!---{{#each categories as |category|}}-->
+
+      <a href='/category/{{id}}'>{{name}}</a>
+
+    <!---{{/each}}-->
+    <h2 class="text-center">SHOP BY AGE</h2>
+    <div class="buttoncolor">
+    <button class="button-one round">0-3M</button>
+    <button class="button-two round">3-6M</i></button>
+    <button class="button-three round">6-12M</button>
+    <button class="button-four round">12-18M</button>
+    <button class="button-five round">18-24M</button>
+  </div>
+  </div>
+</div>
+
+<h2 class="text-center">OUR PICKS</h2>
+  
+  <div class='d-flex row justify-content-around'>
+    
+    <!---{{#each products as |product|}}-->
+
+    <div
+    class='card col-sm-4 col-md-5 m-2 ml-5'
+    style='max-width: 18rem; min-width:18rem; border-radius:30px;'
+  >
+      
+        <h5 class='card-title mt-3'><a href='/products/{{id}}'>{{name}}</a></h5>
+        <img
+          class='card-img'
+          src='/img/assets/placeholder.jpg'
+          alt='Card image cap'
+        />
+        <div class='card-body'>
+
+          <p class='card-text price'>PRICE: ${{price}}</p>
+          <p class='card-text'>POSTED BY: {{user.username}}</p>
+          <div class="d-flex justify-content-center">
+            <button
+              class= 'btn btn-primary addToCartBtn'
+              data-id='{{id}}'
+              data-price='{{price}}'
+              value='{{id}}'
+            >ADD TO CART</button>
+            </div>
+        </div>
+      </div>
+
+   <!--- {{/each}}-->
+
+</div>
+</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
