@@ -11,7 +11,7 @@ const productData = [
   },
 
   {
-    name: 'Yellow Onsie',
+    name: 'Yellow Onesie',
     description: 'Worn only once. Still in great condition.',
     price: 37.0,
     stock: 1,
