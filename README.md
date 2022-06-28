@@ -4,7 +4,7 @@
 No additional installation required. Click the link in "Deployed Website" below to run the application.
 
 ## Deployed Application
-https://github.com/Lunirs/cub2bear/deployments/activity_log?environment=cub2bear
+https://cub2bear.herokuapp.com/
 
 ## Description
 Cub2Bear is application that user can sell their baby's old clothing and purchase new ones for their baby's current size. 
@@ -23,7 +23,9 @@ Cub2Bear is application that user can sell their baby's old clothing and purchas
 - In the cart page, user can manage amount of products or delete the product that user dosn't want to purchase.
 
 ## Application Screenshot
-(attach a screenshot of few pages of the application after works done)
+![sample](https://github.com/Lunirs/cub2bear/blob/main/screenshot1.jpg)
+![sample](https://github.com/Lunirs/cub2bear/blob/main/screenshot2.jpg)
+![sample](https://github.com/Lunirs/cub2bear/blob/main/screenshot3.jpg)
 
 ## Credits
 Creatd by Shay Bendeck, Taeyong Lee, Akemah Tasha, Daniel Hong
