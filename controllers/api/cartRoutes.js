@@ -31,7 +31,6 @@ router.post('/', withAuth, async (req, res) => {
     let cartData;
     if(item) {
       const total = item.quantity + req.body.quantity;
-      console.log(total);
 
       if(total <= product.stock) {
         cartData = await Cart.increment({
