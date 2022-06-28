@@ -1,0 +1,114 @@
+
+h2{
+    font-size:18px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 10px;
+    margin: 30px;
+}
+
+  button:focus {
+    outline: 0;
+  }
+
+  
+.round{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size:14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    font-weight: lighter; 
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    margin: 50px;  
+}
+  .button-one {
+    background-color: #fb7777;
+    border-radius: 50px;
+    
+  }
+  
+  .button-two {
+    background-color: #f8b941;
+    border-radius: 50px;
+  }
+  
+  .button-three {
+    background-color: #e7d643;
+    border-radius: 50px;
+  }
+  
+  .button-four {
+    background-color: #9ad8ab;
+    border-radius: 50px;
+  }
+  
+  .button-five {
+    background-color: #679ae5;
+    border-radius: 50px;
+  } 
+
+
+/*same as individual category*/
+.addToCartBtn{
+    margin-top: 30px;
+    border: none;
+    background:#ED8A8A;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 5px;
+    color: white;
+    outline: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    top: -3px;
+    border-radius: 10px;
+    font-size:13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.card-title{
+    font-size:18px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    margin: 10px;
+}
+
+.card-body{
+    font-size:14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #0167FF;
+    font-weight: lighter; 
+}
+
+.addToCartBtn{
+    margin-top: 30px;
+    border: none;
+    background:#ED8A8A;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    outline: none;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    top: -3px;
+    border-radius: 10px;
+    font-size:13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
