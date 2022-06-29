@@ -1,14 +1,5 @@
 # Cub2Bear
 
-<<<<<<< HEAD
-=======
-## Installation
-No additional installation required. Click the link in "Deployed Website" below to run the application.
-
-## Deployed Application
-https://cub2bear.herokuapp.com/
-
->>>>>>> fbc1428853192812795281f80751180668b466e4
 ## Description
 
 Babies outgrow their clothing very fast. You can prepare and buy clothing for the baby. But they'll just outgrow it in a matter of a few weeks ~ a month. So what do you do with your old baby clothing? "Shove it in the attic" is probably the most popular answer we have heard. 
