@@ -1,5 +1,14 @@
 # Cub2Bear
 
+<<<<<<< HEAD
+=======
+## Installation
+No additional installation required. Click the link in "Deployed Website" below to run the application.
+
+## Deployed Application
+https://cub2bear.herokuapp.com/
+
+>>>>>>> fbc1428853192812795281f80751180668b466e4
 ## Description
 
 Babies outgrow their clothing very fast. You can prepare and buy clothing for the baby. But they'll just outgrow it in a matter of a few weeks ~ a month. So what do you do with your old baby clothing? "Shove it in the attic" is probably the most popular answer we have heard. 
@@ -81,7 +90,9 @@ With this you are ready to run this application.
 - In the cart page, user can manage amount of products or delete the product that user dosn't want to purchase.
 
 ## Application Screenshot
-(attach a screenshot of few pages of the application after works done)
+![homepage](./public/img/assets/screenshot1.jpg)
+![login page](./public/img/assets/screenshot2.jpg)
+![cart](./public/img/assets/screenshot3.jpg)
 
 ## Credits
 Created by Shay Bendeck, Taeyong Lee, Akemah Tasha, Daniel Hong
