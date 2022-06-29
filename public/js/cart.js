@@ -10,12 +10,12 @@ const addCart = async (event) => {
     headers: { 'Content-Type': 'application/json' },
   });
 
-  if (response.status == "200") {
-    alert("The item is added to cart successfully");
-  } else if(response.status == "401") {
-    alert("You already have maximum stock of the item in the cart.")
+  if (response.status == '200') {
+    alert('The item is added to cart successfully');
+  } else if (response.status == '401') {
+    alert('You already have maximum stock of the item in the cart.');
   } else {
-    alert("Failed to add the item into the cart.");
+    alert('Failed to add the item into the cart.');
   }
 };
 
